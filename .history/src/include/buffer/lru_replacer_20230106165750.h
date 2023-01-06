@@ -57,15 +57,9 @@ public:
   frame_id_t Pop();
   size_t Size();
 
-  std::vector<frame_id_t> list_;
-  // std::vector<CListNode> list_;
+  std::vector<CListNode> list_;
 
 };
-
-class CListNode{
-public:
-  frame_id_t val;
-}
 
 // class CListNode{
 

@@ -36,16 +36,10 @@ void LRUReplacer::Unpin(frame_id_t frame_id) {
     list_.Remove(frame_id);
 }
 
-auto LRUReplacer::Size() -> size_t {
+auto LRUReplacer::Size() -> size_t { return 0; }
     return list_.Size();
 }  // namespace bustub
 
 void CList::Add(frame_id_t v){
-    list_.push_back(v);
-}
-
-void CList::Remove(frame_id v){
-    for(auto n: list_){
-
-    }
+    
 }

@@ -51,21 +51,12 @@ class LRUReplacer : public Replacer {
 };
 
 class CList{
-public:
+  std::vector<CListNode> list_;
   void Add(frame_id_t v);
   void Remove(frame_id_t v);
   frame_id_t Pop();
   size_t Size();
-
-  std::vector<frame_id_t> list_;
-  // std::vector<CListNode> list_;
-
 };
-
-class CListNode{
-public:
-  frame_id_t val;
-}
 
 // class CListNode{
 

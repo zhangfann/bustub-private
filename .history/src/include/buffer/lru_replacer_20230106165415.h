@@ -45,27 +45,15 @@ class LRUReplacer : public Replacer {
 
   auto Size() -> size_t override;
 
-  CList lru_replacer_list_;
+  CList list_;
  private:
   // TODO(student): implement me!
 };
 
 class CList{
-public:
-  void Add(frame_id_t v);
-  void Remove(frame_id_t v);
-  frame_id_t Pop();
-  size_t Size();
-
-  std::vector<frame_id_t> list_;
-  // std::vector<CListNode> list_;
-
+  CList* next;
+  frame_id val;
 };
-
-class CListNode{
-public:
-  frame_id_t val;
-}
 
 // class CListNode{
 

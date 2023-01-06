@@ -14,9 +14,7 @@
 
 namespace bustub {
 
-LRUReplacer::LRUReplacer(size_t num_pages) {
-    
-}
+LRUReplacer::LRUReplacer(size_t num_pages) {}
 
 LRUReplacer::~LRUReplacer() = default;
 
@@ -24,28 +22,12 @@ auto LRUReplacer::Victim(frame_id_t *frame_id) -> bool {
 
     frame_id_t i= list_.Pop();
     *frame_id= i;
-    return true;
  }
 
-void LRUReplacer::Pin(frame_id_t frame_id) {
-    list_.Add(frame_id);
+void LRUReplacer::Pin(frame_id_t frame_id) {}
 
-}
+void LRUReplacer::Unpin(frame_id_t frame_id) {}
 
-void LRUReplacer::Unpin(frame_id_t frame_id) {
-    list_.Remove(frame_id);
-}
+auto LRUReplacer::Size() -> size_t { return 0; }
 
-auto LRUReplacer::Size() -> size_t {
-    return list_.Size();
 }  // namespace bustub
-
-void CList::Add(frame_id_t v){
-    list_.push_back(v);
-}
-
-void CList::Remove(frame_id v){
-    for(auto n: list_){
-
-    }
-}
